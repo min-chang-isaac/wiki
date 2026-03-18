@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wiki</title>
+</head>
+<body>
+	<h1>Wiki</h1>
+	<ul>
+	<li th:each="p : ${pages}">
+		<span th:text="${p.title}"></span>
+	</li>
+    </ul>
+
+</body>
+</html>

@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 
 @Entity
-public class Wikipage {
+public class WikiPage {
 
 	@Id
 	@GeneratedValue
