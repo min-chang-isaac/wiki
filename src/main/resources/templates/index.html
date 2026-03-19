@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Wiki</title>
 </head>
 <body>
 	<h1>Wiki</h1>
+	<p><a th:href="@{/pages/new}">新規ページ作成</a></p>
 	<ul>
 	<li th:each="p : ${pages}">
 		<span th:text="${p.title}"></span>
