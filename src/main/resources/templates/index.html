@@ -6,9 +6,15 @@
 </head>
 <body>
 	<h1>Wiki</h1>
+<<<<<<< HEAD
 	<p><a th:href="@{/pages/new}">新規ページ作成</a></p>
+=======
+	
+	<p><a th:href="@{/pages/new}">新規ページ作成</a></p>
+	
+>>>>>>> 5c8cc4d (3/20)
 	<ul>
-	<li th:each="p : ${pages}">
+	 <li th:each="p : ${pages}">
 		<span th:text="${p.title}"></span>
 	</li>
     </ul>

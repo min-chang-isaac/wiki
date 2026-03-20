@@ -11,6 +11,7 @@ import com.example.wiki.service.WikiService;
 @Controller
 public class WikiController {
 
+<<<<<<< HEAD
 	private final WikiService service;
 	
 	public WikiController(WikiService service) {
@@ -40,3 +41,29 @@ public class WikiController {
 	
 	
 }
+=======
+    private final WikiService service;
+
+    public WikiController(WikiService service) {
+        this.service = service;
+    }
+
+    @GetMapping("/")
+    public String index(Model model) {
+        model.addAttribute("pages", service.findAll());
+        return "index";
+    }
+
+    @GetMapping("/pages/new")
+    public String newPageForm(Model model) {
+        model.addAttribute("page", new WikiPage());
+        return "new";
+    }
+
+    @PostMapping("/pages")
+    public String createPage(WikiPage page) {
+        service.save(page);
+        return "redirect:/";
+    }
+}
+>>>>>>> 5c8cc4d (3/20)
