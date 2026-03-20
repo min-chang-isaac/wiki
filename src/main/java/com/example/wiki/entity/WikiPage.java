@@ -9,33 +9,33 @@ import jakarta.persistence.Lob;
 @Entity
 public class WikiPage {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	private String title;
-	
-	@Lob
-	private String content;
-	
-	public Long getId() {
-		return id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	
-	public String getContent() {
-		return content;
-	}
-	
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	public void setContent(String content) {
-		this.content = content;
-	}
-	
-	
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String title;
+
+    @Lob
+    private String content;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }
