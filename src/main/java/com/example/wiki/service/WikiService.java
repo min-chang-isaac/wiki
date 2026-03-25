@@ -23,4 +23,8 @@ public class WikiService {
     public WikiPage save(WikiPage page) {
         return repo.save(page);
     }
+    
+    public WikiPage findById(Long id) {
+    	return repo.findById(id).orElseThrow();
+    }
 }
