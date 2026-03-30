@@ -13,6 +13,7 @@
 <ul>
     <li th:each="p : ${pages}">
         <span th:text="${p.title}"></span>
+        <a th:href="@{/pages/{id}/edit(id=${p.id})}">編集</a>
     </li>
 </ul>
 

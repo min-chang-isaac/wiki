@@ -6,17 +6,26 @@
 </head>
 <body>
 
-<h1>ページ編集</h1>	
+	<h1>ページ編集</h1>
 
-<form th:action="@{/pages/{id}(id=${page.id})}" method="post">
+	<form th:action="@{/pages/{id}(id=${page.id})}" th:object="${page}"
+		method="post">
+		<div>
+			<label for="title">タイトル</label> <input type="text" id="title"
+				th:field="*{title}">
+		</div>
 
-<input type="text" name="title" th:value="${page.title}" />
+		<div>
+			<label for="context">本文</label>
+			<textarea id="content" th:field="*{content}" rows="10" cols="50"></textarea>
+		</div>
 
-<textarea name="content" th:text="${page.content}"></textarea>
+		<div>
+			<button type="submit">更新</button>
+		</div>
+	</form>
 
-<button type="submit">更新</button>
-
-</form>
+<p><a th:href="@{/}">一覧に戻る</a></p>\
 
 </body>
 </html>
