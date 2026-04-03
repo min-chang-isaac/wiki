@@ -14,6 +14,9 @@
     <li th:each="p : ${pages}">
         <span th:text="${p.title}"></span>
         <a th:href="@{/pages/{id}/edit(id=${p.id})}">編集</a>
+        <form th:action="@{/pages/{id}/delete(id=${p.id})}" method="post" style="display:inline;">
+    		<button type="submit">削除</button>
+		</form>
     </li>
 </ul>
 

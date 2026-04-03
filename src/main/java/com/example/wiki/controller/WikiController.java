@@ -52,7 +52,12 @@ public class WikiController {
         return "redirect:/";
     }
     
-    
+    @PostMapping("/pages/{id}/delete")
+    public String deletePage(@PathVariable Long id, WikiPage page) {
+    	service.deleteById(id);
+    	return "redirect:/";
+    	
+    }
     
     
     

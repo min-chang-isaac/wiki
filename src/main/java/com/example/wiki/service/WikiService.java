@@ -27,4 +27,11 @@ public class WikiService {
     public WikiPage findById(Long id) {
     	return repo.findById(id).orElseThrow();
     }
+    
+    public void deleteById(Long id) {
+    	repo.deleteById(id);
+    }
+    
+    
+    
 }
