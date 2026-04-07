@@ -58,8 +58,13 @@ public class WikiController {
     	return "redirect:/";
     	
     }
-    
-    
+    @GetMapping("/pages/{id}")
+    public String detail(@PathVariable Long id, Model model) {
+    	WikiPage page = service.findById(id);
+    	model.addAttribute("page", page);
+    	return "detail";
+    	
+    }
     
     
 }

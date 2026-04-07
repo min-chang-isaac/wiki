@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>詳細ページ</title>
+</head>
+<body>
+
+<h1 th:text="${page.title}"></h1>
+<div th:text="${page.content}"></div>
+
+<p><a th:href="@{/}">一覧に戻る</a></p>
+
+</body>
+</html>
