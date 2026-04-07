@@ -65,6 +65,4 @@ public class WikiController {
     	return "detail";
     	
     }
-    
-    
 }
