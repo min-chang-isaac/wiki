@@ -6,28 +6,29 @@
 </head>
 <body>
 
-	<h1>ページ編集</h1>
+<h1>ページ編集</h1>
 
-	<form th:action="@{/pages/{id}(id=${page.id})}" th:object="${page}"
-		method="post">
-		<div>
-			<label for="title">タイトル</label> <input type="text" id="title"
-				th:field="*{title}">
-		</div>
+<form th:action="@{/pages/{id}(id=${page.id})}" th:object="${page}" method="post">
+    <div>
+        <label for="title">タイトル</label>
+        <input type="text" id="title" th:field="*{title}">
+        <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
+    </div>
 
-		<div>
-			<label for="context">本文</label>
-			<textarea id="content" th:field="*{content}" rows="10" cols="50"></textarea>
-		</div>
+    <div>
+        <label for="content">本文</label>
+        <textarea id="content" th:field="*{content}" rows="10" cols="50"></textarea>
+        <div th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
+    </div>
 
-		<div>
-			<button type="submit">更新</button>
-		</div>
-	</form>
+    <div>
+        <button type="submit">更新</button>
+    </div>
+</form>
 
-<p><a th:href="@{/}">一覧に戻る</a></p>\
+<p>
+    <a th:href="@{/}">一覧に戻る</a>
+</p>
 
 </body>
 </html>
-
-

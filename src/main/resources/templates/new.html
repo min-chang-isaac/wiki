@@ -12,11 +12,13 @@
     <div>
         <label for="title">タイトル</label>
         <input type="text" id="title" th:field="*{title}">
+        <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
     </div>
 
     <div>
         <label for="content">本文</label>
         <textarea id="content" th:field="*{content}" rows="10" cols="50"></textarea>
+        <div th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
     </div>
 
     <div>
